@@ -1,0 +1,25 @@
+<body>
+	<% if flash[:success] %>
+      <p><%= flash[:success] %></p>
+    <% end %>
+	<p class="show-text">
+		<strong>Title：</strong>
+		<%= @book.title %>
+	</p>
+
+	<p class="show-text">
+		<strong>Body：</strong>
+		<%= @book.body %>
+	</p>
+
+	<div class="sub-link">
+  	  <table>
+  	    <tr>
+  	      <th class="link-text"><%= link_to "Edit", edit_book_path(@book), :style=>"color: black;" %></th>
+  	      <th class="link-text">|</th>
+	      <th class="link-text"><%= link_to "Back", books_path, :style=>"color: black;" %></th>
+        </tr>
+      </table>
+
+    </div>
+</body>
